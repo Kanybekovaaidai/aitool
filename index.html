@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KnowledgeShare — Ask. Learn. Share.</title>
+  <!-- Google Fonts: Inter for body, Poppins for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <div class="logo">KS</div>
+          <div>
+            <h1 class="title">KnowledgeShare</h1>
+            <p class="tagline">Ask. Learn. Share.</p>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="#">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="ask-section">
+        <form id="questionForm" class="question-form" aria-label="Add a question">
+          <label class="sr-only" for="questionInput">Your question</label>
+          <textarea id="questionInput" placeholder="What's on your mind? Ask a question..." rows="2" required></textarea>
+          <div class="form-row">
+            <button type="submit" class="btn primary">Post Question</button>
+            <small class="hint">Questions are public and saved in your browser.</small>
+          </div>
+        </form>
+      </section>
+
+      <section class="feed-section">
+        <h2 class="feed-title">Latest Questions</h2>
+        <div id="feed" class="feed" aria-live="polite"></div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="about-section">
+        <h2>About KnowledgeShare</h2>
+        <p>KnowledgeShare is a simple, community-first place to ask questions and share answers. Built as an MVP to demonstrate clean UX, quick interactions, and persistent local storage for lightweight knowledge capture.</p>
+        <div class="about-cards">
+          <div class="about-card">
+            <h3>Fast & Simple</h3>
+            <p>Post questions and answers in seconds. The interface is intentionally minimal to keep focus on content.</p>
+          </div>
+          <div class="about-card">
+            <h3>Private to You</h3>
+            <p>Content is stored in your browser (LocalStorage). No server required—perfect for prototypes and offline use.</p>
+          </div>
+          <div class="about-card">
+            <h3>Extendable</h3>
+            <p>Easily wired to an API later. The code is modular for straightforward backend integration.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="contact-section">
+        <h2>Contact</h2>
+        <p>If you'd like to send feedback or report an issue, use the form below. Messages are kept locally for demo purposes.</p>
+
+        <form id="contactForm" class="contact-form" aria-label="Contact form">
+          <div class="row">
+            <input id="contactName" type="text" placeholder="Your name" required />
+            <input id="contactEmail" type="email" placeholder="Your email" required />
+          </div>
+          <textarea id="contactMessage" rows="4" placeholder="Your message..." required></textarea>
+          <div class="form-row">
+            <button type="submit" class="btn primary">Send Message</button>
+            <small class="hint">Messages are saved in your browser for this demo.</small>
+          </div>
+        </form>
+
+        <div id="messagesList" class="messages-list" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© <span id="year"></span> KnowledgeShare. All rights reserved.</p>
+        <div class="socials">
+          <a href="#" aria-label="Twitter">Twitter</a>
+          <a href="#" aria-label="GitHub">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
