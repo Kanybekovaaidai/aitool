@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# VSCode
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# dotenv
+.env
+
+# Build
+dist/
+build/
